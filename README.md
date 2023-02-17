@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@jan-janssen](https://github.com/jan-janssen/)
+* [@martin-schlipf](https://github.com/martin-schlipf/)
 
