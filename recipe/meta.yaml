@@ -1,5 +1,5 @@
 {% set name = "py4vasp" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py4vasp-{{ version }}.tar.gz
-  sha256: 507cbd4acccd17eea196052cd0f6fa40b9721f75b9c96b4eda37cf3fd080421f
+  sha256: 7bebcda080ee6d0991b20318c9b553d0fc51512d75c042a5db26883056eb3c02
 
 build:
   noarch: python
