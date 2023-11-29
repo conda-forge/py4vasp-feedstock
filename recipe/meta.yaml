@@ -1,5 +1,5 @@
 {% set name = "py4vasp" %}
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py4vasp-{{ version }}.tar.gz
-  sha256: 8621de58c459c43106f39dd1b63f1066ff6323d973af780ae0568868d7991d2f
+  sha256: 11c1f40bc9f11bc5e4d736745922c0b99f4bb668ee7eb21146a161381cb9dd5e
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<4.0
+    - python <3.12,>=3.8
     - poetry
   run:
     - ase >=3.19.0,<4.0.0
@@ -29,8 +29,9 @@ requirements:
     - numpy >=1.17.4,<2.0.0
     - pandas >=1.3.0,<2.0.0
     - plotly >=5.1.0,<6.0.0
-    - python >=3.6,<4.0
+    - python <3.12,>=3.8
     - ipywidgets <8.0,>=7.7
+    - python-blosc2
 
 test:
   imports:
