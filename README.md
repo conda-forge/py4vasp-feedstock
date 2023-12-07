@@ -3,7 +3,7 @@ About py4vasp-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py4vasp-feedstock/blob/main/LICENSE.txt)
 
-Home: https://vasp.at/py4vasp
+Home: https://vasp.at/py4vasp/latest
 
 Package license: Apache-2.0
 
