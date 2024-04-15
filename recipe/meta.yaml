@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py4vasp-{{ version }}.tar.gz
-  sha256: 11c1f40bc9f11bc5e4d736745922c0b99f4bb668ee7eb21146a161381cb9dd5e
+  sha256: 85305d4f47393530544e4365c77c6faa31eca5bd322baa7b110b439913f07b52
 
 build:
   entry_points:
