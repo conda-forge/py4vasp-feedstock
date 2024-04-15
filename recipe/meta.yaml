@@ -14,7 +14,7 @@ build:
     - error-analysis = py4vasp.scripts.error_analysis:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -22,8 +22,8 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >=3.8
-    - numpy >=1.23
+    - python >=3.8,<3.12
+    - numpy >=1.23.0
     - h5py >=3.7.0
     - pandas >=1.4.3
     - nglview >=3.0.5
