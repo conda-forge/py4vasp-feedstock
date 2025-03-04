@@ -1,0 +1,22 @@
+From 1e8a879cfc800f8a9cd692664162a2f364d34cd3 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jan=20Jan=C3=9Fen?= <janssen@mpie.de>
+Date: Tue, 4 Mar 2025 10:34:04 +0100
+Subject: [PATCH] nglview fix
+
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index d4ca0bf..6fd8733 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -27,7 +27,7 @@ python = ">=3.9"
+ numpy = "^1.23"
+ h5py = ">=3.7.0"
+ pandas = ">=1.4.3"
+-nglview = ">=3.0.5"
++nglview = ">=0.0.0"
+ ase = ">=3.22.1"
+ plotly = ">=5.9.0"
+ kaleido = ">=0.2.1,<0.2.1.post1 || >0.2.1.post1"

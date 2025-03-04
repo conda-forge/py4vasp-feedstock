@@ -1,13 +1,15 @@
 {% set name = "py4vasp" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py4vasp-{{ version }}.tar.gz
-  sha256: 85305d4f47393530544e4365c77c6faa31eca5bd322baa7b110b439913f07b52
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/py4vasp-{{ version }}.tar.gz
+  sha256: bc7559c21e261d1838eb5aa2ba55db0e5f646a470f750dd7c5fb20b2e7436840
+  patches:
+    - nglview.patch
 
 build:
   entry_points:
@@ -18,19 +20,20 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.8
-    - numpy >=1.23
+    - scipy >=1.12.0
+    - python >={{ python_min }}
+    - numpy >=1.23.0,<2.0.0
     - h5py >=3.7.0
     - pandas >=1.4.3
     - nglview >=3.0.5
     - ase >=3.22.1
     - plotly >=5.9.0
-    - python-kaleido !=0.2.1.post1,>=0.2.1
-    - ipython >=8.12
+    - python-kaleido >=0.2.1
+    - ipython >=8.12.0,<9.0.0
     - notebook
 
 test:
@@ -41,6 +44,7 @@ test:
     - error-analysis --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://vasp.at/py4vasp/latest
