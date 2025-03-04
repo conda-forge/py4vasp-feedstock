@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/py4vasp-{{ version }}.tar.gz
   sha256: bc7559c21e261d1838eb5aa2ba55db0e5f646a470f750dd7c5fb20b2e7436840
+  patches:
+    - nglview.patch
 
 build:
   entry_points:
