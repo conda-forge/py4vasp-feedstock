@@ -32,7 +32,7 @@ requirements:
     - nglview >=3.0.5
     - ase >=3.22.1
     - plotly >=5.9.0
-    - python-kaleido >=0.2.1,<0.2.1.post1|,>0.2.1.post1
+    - python-kaleido >=0.2.1
     - ipython >=8.12
     - notebook
 
