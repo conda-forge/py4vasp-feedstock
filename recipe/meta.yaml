@@ -1,5 +1,5 @@
 {% set name = "py4vasp" %}
-{% set version = "0.11.1" %}
+{% set version = "0.11.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/py4vasp-{{ version }}.tar.gz
-  sha256: 453ec34c7f3ffaaf0c36119b8fddaa2215edd2e3a90485d588c3374efc1d8bb0
+  sha256: 071b603fb0b3680f3e93f2d6348f4f62e4ef5724d5308d7c6da8f980f854a5bc
   patches:
     - nglview.patch
 
