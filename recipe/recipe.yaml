@@ -1,0 +1,66 @@
+schema_version: 1
+
+context:
+  name: py4vasp
+  version: "0.11.3"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/py4vasp-${{ version }}.tar.gz
+  sha256: 15116eb22d65a0b3311c63fdb75087093547ac214531df683cbc4da3ecead7ec
+  patches:
+    - nglview.patch
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - error-analysis = py4vasp.scripts.error_analysis:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - click >=8.1.8
+    - scipy >=1.12.0
+    - python >=${{ python_min }}
+    - numpy >=2.0
+    - h5py >=3.9.0
+    - pandas >=2.0
+    - nglview >=3.0.5
+    - ase >=3.23
+    - plotly >=5.23
+    - python-kaleido >=1.0
+    - ipython >=8.26
+    - notebook
+
+tests:
+  - python:
+      imports:
+        - py4vasp
+      pip_check: true
+      python_version: ${{ python_min }}
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - error-analysis --help
+
+about:
+  summary: Tool for assisting with the analysis and setup of VASP calculations.
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  homepage: https://vasp.at/py4vasp/latest
+
+extra:
+  recipe-maintainers:
+    - martin-schlipf
+    - jan-janssen
